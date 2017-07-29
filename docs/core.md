@@ -10,8 +10,8 @@
 
 ## 2、mk-server <a href="https://github.com/ziaochina/mk-server" target="_blank">[代码]</a>
 
-- 基于nodejs, hapi, sequelize, node-zookeeper-dubbo的开源项目
-- 实现了webapi框架、IoC依赖注入、RPC远程调用、数据库访问、事务、身份授权
+- 基于nodejs, hapi, inert
+- 实现api到url的绑定、拦截器、静态文件服务
 
 ## 3、mk-component <a href="https://github.com/ziaochina/mk-component" target="_blank">[代码]</a>  <a href="https://ziaochina.github.io/mk-component" target="_blank">[在线demo]</a>
 
@@ -33,3 +33,15 @@
 - 基于nodejs的命令行工具
 - 支持快速创建website、app脚手架
 - 编译网站下所有app自动生成入口程序
+
+## 7、mk-service-auth <a href="https://github.com/ziaochina/mk-service-auth" target="_blank">[代码]</a>
+
+- 提供token的创建与验证
+- 注册为mk-server的拦截器
+- 扩展上下文中的setToken方法和token对象
+
+## 8、mk-service-db <a href="https://github.com/ziaochina/mk-service-db" target="_blank">[代码]</a>
+
+- 基于sequelize实现数据库的访问
+- 注册为mk-server的拦截器
+- 实现自动化事务包装，通过api.getDB()返回数据库访问对象
